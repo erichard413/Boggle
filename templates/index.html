@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>BOGGLE</h1>
+    <div class="game-header">
+        <section class="section-guessform">
+        <form action="POST" class="guessform">
+            <input type="text" name="guess-word" id="guess-input" placeholder="Guess word here">
+            <button id="submit-button">Submit</button>
+        </form>
+        </section>
+        <section id="game-detail">
+            <h2>Current Score: <span id="current-score">0</span></h2>
+            <h2>Timer: <span id="timer"></span></h2>
+            <h2>Games Played: <span id="games-played">{{nplays}}</span></h2>
+            <h2>High Score:  <span id="high-score">{{highscore}}</span></h2>
+        </section>
+    </div>
+    
+    <hr>
+    <div class="body">
+        <div class="board">
+        {% for row in board %}
+        <div class="row">
+            {% for letter in row %}
+            <div class="letter-block {{letter}}">
+            {{ letter }}
+            </div>
+                {% endfor %}
+        </div>
+            {% endfor %}
+    </div>
+    <div class="results">
+        <h1>Played words</h1>
+        <ul id="result"></ul>
+    </div>
+    </div>
+    
+  
+    <script src="/static/app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+</body>
+</html>

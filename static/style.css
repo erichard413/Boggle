@@ -1,0 +1,49 @@
+
+.board {
+    display: inline-block;
+}
+
+div .letter-block  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    max-width: 150px;
+    max-height: 150px;
+    height: 150px;
+    width: 150px;
+    font: 2rem arial black;
+    background-color: yellow;
+}
+div .row {
+    display: flex;
+}
+.section-guessform {
+    display: inline-block;
+}
+div .display {
+    display: inline-block;
+}
+div .body {
+    display: flex
+}
+div .results {
+    display: inline-block;
+    position: absolute;
+    padding-left: 20px;
+}
+#result {
+    list-style: none;
+}
+#score {
+    display: inline-block;
+    padding-left: 50px;
+}
+#game-detail > h2 {
+    display: inline-block;
+    margin: auto;
+    padding-left: 50px;
+}
+.game-header {
+    display:flex;
+}
